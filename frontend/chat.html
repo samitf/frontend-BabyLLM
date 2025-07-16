@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat | BabyLLM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Manrope', sans-serif; }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #000;
+        border-radius: 10px;
+    }
+
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #000 transparent;
+    }
+    </style>
+</head>
+
+<body class="bg-white text-black min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html#home" class="text-lg font-bold">BabyLLM</a>
+      <a href="index.html" class="text-sm hover:text-gray-700 flex items-center gap-1">
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>Back to Home
+      </a>
+    </div>
+  </nav>
+
+<main class="flex-1 flex flex-col lg:flex-row gap-6 px-4 pt-28 pb-10 max-w-6xl mx-auto w-full">
+
+  <!-- Chat Section -->
+  <div class="flex-1">
+    <h1 class="text-2xl font-semibold mb-6 text-center lg:text-left">Talk to <span class="font-bold">Thursday</span></h1>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="bg-white border border-gray-300 rounded-lg h-[400px] overflow-y-auto px-4 py-3 space-y-4 text-sm mb-4 shadow-sm custom-scrollbar"></div>
+
+    <!-- Input + Send -->
+    <div class="flex gap-2 mb-3">
+      <input id="userInput" type="text" placeholder="Type your message..." class="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-1 focus:ring-black text-sm">
+      <button id="sendBtn" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition text-sm">Send</button>
+    </div>
+
+
+  <!-- Topics Sidebar -->
+  <aside class="w-full lg:w-1/3 max-h-[400px] overflow-y-auto border border-gray-300 rounded-lg p-4 shadow-sm custom-scrollbar">
+    <h2 class="text-lg font-semibold mb-2">Few topics I’ve taught <span class="font-bold">Thursday</span></h2>
+    <p class="text-sm text-gray-600 mb-4">He’s learning more day by day...</p>
+
+    <div class="flex flex-wrap gap-2">
+      <span class="bg-black text-white px-3 py-1 rounded-full text-sm">Machine Learning</span>
+      <span class="bg-black text-white px-3 py-1 rounded-full text-sm">Animals GK</span>
+      <span class="bg-black text-white px-3 py-1 rounded-full text-sm">What is AI?</span>
+      <span class="bg-black text-white px-3 py-1 rounded-full text-sm">NLP</span>
+    </div>
+  </aside>
+
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-xs text-gray-400 border-t border-gray-200">
+    <span class="font-semibold text-black">BabyLLM</span> by Samit Fernandes
+  </footer>
+
+  <script src="chat.js"></script>
+</body>
+</html>

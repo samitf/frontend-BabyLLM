@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BabyLLM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    overflow-y: scroll;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+</style>
+
+</head>
+
+<body class="hide-scrollbar bg-white text-black snap-y snap-mandatory overflow-y-scroll">
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/30 backdrop-blur-md shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="#home" class="text-lg font-semibold tracking-tight">BabyLLM</a>
+        <div class="flex gap-6 text-sm">
+          <a href="#about" class="hover:text-gray-600 flex items-center gap-1"><i data-lucide="info" class="w-4 h-4"></i>About</a>
+          <a href="#chat" class="hover:text-gray-600 flex items-center gap-1"><i data-lucide="message-circle" class="w-4 h-4"></i>Chat</a>
+          <a href="#contact" class="hover:text-gray-600 flex items-center gap-1"><i data-lucide="at-sign" class="w-4 h-4"></i>Contact</a>
+        </div>
+      </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="h-screen snap-start relative flex items-center justify-center px-6 pt-20 text-white">
+    <!-- Background image -->
+    <img src="./assets/hero.png" alt="Hero" class="absolute inset-0 w-full h-full object-cover -z-10" />
+    <div class="bg-black bg-opacity-70 p-8 md:p-12 rounded-lg max-w-2xl text-center">
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4">BabyLLM</h1>
+      <p class="text-lg md:text-xl mb-6">A chatbot that learns from you — in real time.</p>
+      <a href="#chat" class="inline-block bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition">Try it now ↓</a>
+    </div>
+  </section>
+
+<!-- BOUT SECTION -->
+<section id="about" class="h-screen snap-start flex items-center justify-center px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h2 class="text-4xl font-bold mb-4 text-black">What is BabyLLM?</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed text-justify">
+        <span class="text-black font-medium">BabyLLM</span> is a minimal, self-learning NLP chatbot that 
+        <strong class="text-black">starts with zero knowledge</strong> and evolves purely through interaction.
+        Every correction you give becomes a new memory, and once enough information is gathered, it 
+        <strong class="text-black">automatically retrains itself</strong>.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed text-justify">
+        Think of it as an intelligent blank slate — perfect for experimenting with <span class="italic">real-time learning</span>,
+        language understanding, and custom training. It's more than a chatbot — it's your personal AI experiment.
+      </p>
+    </div>
+
+    <div class="hidden md:flex justify-center">
+      <img src="./assets/womb.png" alt="AI Illustration" class="w-full max-w-md opacity-90 rounded-md shadow-sm" />
+    </div>
+
+  </div>
+</section>
+
+<section id="chat" class="min-h-screen snap-start flex flex-col items-center justify-center bg-gray-50 px-4 text-center overflow-hidden">
+  <h2 class="text-2xl md:text-4xl font-semibold mb-10">Watch BabyLLM in Action</h2>
+
+  <div class="w-full max-w-3xl overflow-hidden rounded-xl shadow-md mb-10">
+    <img 
+      src="./assets/chat.gif"
+      alt="BabyLLM Demo"
+      class="w-full h-auto object-contain"
+    />
+  </div>
+
+  <a 
+    href="chat.html" 
+    class="inline-flex items-center gap-2 border border-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition text-base"
+  >
+    Try it Out
+    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+  </a>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="h-screen snap-start flex flex-col justify-center items-center px-6 text-gray-800">
+  <div class="text-center">
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4">Connect</h2>
+    <p class="mb-6 text-base text-gray-600">Feel free to reach out or check out my other work:</p>
+
+    <div class="flex flex-col items-center gap-4 text-base">
+      <a href="mailto:samitfernandes019@gmail.com" class="flex items-center gap-2 hover:text-black transition">
+        <i data-lucide="mail" class="w-4 h-4"></i>
+        samitfernandes019@gmail.com
+      </a>
+
+      <a href="https://github.com/samitf/" target="_blank" class="flex items-center gap-2 hover:text-black transition">
+        <i data-lucide="github" class="w-4 h-4"></i>
+        GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/samitf" target="_blank" class="flex items-center gap-2 hover:text-black transition">
+        <i data-lucide="linkedin" class="w-4 h-4"></i>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-xs text-gray-400 border-t border-gray-200">
+    <span class="font-semibold text-black">BabyLLM</span> by Samit Fernandes
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
